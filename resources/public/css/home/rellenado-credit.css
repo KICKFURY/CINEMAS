@@ -1,0 +1,214 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    flex-direction: column;
+}
+
+.card-tarjeta {
+    width: 500px;
+    height: 150px;
+}
+
+.card-tarjeta .row {
+    height: 20%;
+    width: 100%;
+    border-bottom: 1.2px solid #292C58;
+}
+.card-tarjeta .row:last-child {
+    border: none;
+}
+.credit {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card-tarjeta .details {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.card-tarjeta .credit {
+    background-color: #1E2148;
+}
+.card-tarjeta .cardholder, .card-tarjeta .number, .card-tarjeta .details {
+    background-color: #242852;
+}
+
+.left label, .credit .left label {
+    margin-left: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #fff;
+}
+
+.left .radio::before, .credit .left .radio::before {
+    content: "";
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.left h4 {
+    color: #fff;
+    font-size: 18px;
+}
+
+input[type=radio]:checked ~ .radio {
+    border: 3px solid #90E1E3;
+    background-color: #18C2C0;
+}
+
+input[type=radio]:checked ~ .radio::before {
+    background-color: #fff;
+}
+
+.cardholder .info, .number .info {
+    margin-left: 40px;
+}
+
+.cardholder .info label, .number .info label {
+    display: inline-block;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    color: #8F92C3;
+    width: 100px;
+}
+
+span {
+    color: #444880;
+}
+
+.cardholder .info input, .number .info input {
+    display: inline-block;
+    max-width: 300px;
+    width: 300px;
+    background-color: transparent;
+    font-family: "Source Code Pro";
+    border: none;
+    outline: none;
+    margin-left: 50px;
+    color: white;
+}
+
+.cardholder .info input::-moz-placeholder, .number .info input::-moz-placeholder {
+    font-family: "Source Code Pro";
+    color: #444880;
+}
+
+.cardholder .info input:-ms-input-placeholder, .number .info input:-ms-input-placeholder {
+    font-family: "Source Code Pro";
+    color: #444880;
+}
+
+.cardholder .info input::placeholder, .number .info input::placeholder {
+    font-family: "Source Code Pro";
+    color: #444880;
+}
+
+#cardnumber::-moz-placeholder {
+    letter-spacing: 2px;
+}
+
+#cardnumber:-ms-input-placeholder {
+    letter-spacing: 2px;
+}
+
+#cardnumber, #cardnumber::placeholder {
+    letter-spacing: 2px;
+}
+
+.details .left {
+    float: left;
+    padding-left: 40px;
+    width: 50%;
+}
+
+.right {
+    float: right;
+    margin-right: 30px;
+}
+
+.details .right {
+    float: right;
+    width: 40%;
+}
+
+
+.details .left label {
+    letter-spacing: 0.5px;
+    color: #8F92C3;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.details .left select {
+    font-family: "Source Code Pro";
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #444880;
+}
+
+.details .right label {
+    margin-right: 20px;
+    color: #8F92C3;
+}
+
+.details .right input {
+    text-align: center;
+    width: 50px;
+    font-family: "Source Code Pro";
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.details .right input::-moz-placeholder {
+    font-family: "Source Code Pro";
+    color: #444880;
+}
+
+.details .right input:-ms-input-placeholder {
+    font-family: "Source Code Pro";
+    color: #444880;
+}
+
+.details .right input::placeholder {
+    font-family: "Source Code Pro";
+    color: #444880;
+}
+
+#btnConfirmacionPago {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: 520px;
+    background-color: #18C2C0;
+    border: none;
+    color: #fff;
+    padding: 18px;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#btnConfirmacionPago:hover {
+    background-color: #15aeac;
+}
+
+#btnConfirmacionPago:active {
+    background-color: #139b99;
+}
+
+#btnConfirmacionPago:disabled {
+    background-color: rgb(128, 128, 128);
+    cursor: not-allowed;
+}

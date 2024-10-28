@@ -1,0 +1,46 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url(/resources/public/img/login/cine.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.container__login__trasero {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px black;
+    backdrop-filter: blur(10px);
+}
+
+.container-inicio-center {
+    transform: translateY(-50px);
+}
+
+.container__iniciarSecion {
+    padding: 10px;
+    width: 50vh;
+}
+
+.container__registrar {
+    padding: 10px;
+    width: 50vh;
+}
+
+.container-registrar-center {
+    transform: translateY(-50px);
+}

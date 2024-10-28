@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/public/css/home/home.css">
+    <link rel="shortcut icon" href="/resources/public/img/home/logo.png" type="image/x-icon">
+    <title>Inicio - CINEMAS</title>
+</head>
+<body>
+    <header>
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light navbar-style">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="/resources/public/img/home/logo.png"/>
+                    </a>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="/resources/views/home/home.html">Inicio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="#">Contacto
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class='loading'>
+        <div class='logo'></div>
+        <div class='dots animate'>
+        <div class='dot'></div>
+        <div class='dot'></div>
+        <div class='dot'></div>
+        <div class='dot'></div>
+        <div class='dot'></div>
+        </div>
+    </div>
+
+    <div class="animated bounceInUp">
+        <h1 class="title"><b>Compra de boletos Cinemas Nicaragua</b></h1>
+        <h5 class="subtitle">
+            <b>
+                Comodidad y conveniencia: La experiencia de compra de boletos simplificada en los cines de Nicaragua.
+            </b>
+        </h5>
+
+        <center>
+            <div class="container-general container-card showcase">
+                <div class="container-general-interior">
+                    <select name="fecha" id="fecha" title="Seleccione una fecha" required></select>
+                    <select name="cinemas" id="cinemas" title="Seleccione el cinemas" required>
+                        <option value="" disabled selected>Seleccione Cinema</option>
+                        <option value="1">Galerias</option>
+                        <option value="2">Plaza Inter</option>
+                        <option value="3">Masaya</option>
+                    </select><br>
+                    <select name="pelicula" id="pelicula" title="Seleccione una pelicula" required>
+                        <option value="" disabled selected>Seleccione pelicula</option>
+                        <option value="Guardianes de la Galaxia Vol 3.">Guardianes de la Galaxia Vol 3.</option>
+                        <option value="Super Mario Bros: La Pelicula">Super Mario Bros: La Pelicula</option>
+                    </select>
+                    <select name="horario" id="horario" title="Seleccione un horario" required>
+                        <option value="" disabled selected>Seleccione Hora</option>
+                        <option value="1">12:15 PM</option>
+                        <option value="2">2:15 PM</option>
+                        <option value="3">4:15 PM</option>
+                        <option value="4">6:15 PM</option>
+                        <option value="5">8:15 PM</option>
+                        <option value="6">10:15 PM</option>
+                    </select>
+                </div>
+                <input id="btnSiguiente1" type="button" value="Siguiente">
+            </div>
+        </center>
+
+        <center>
+            <div class="container-Seleccion-Boleto container-card animated bounceInUp showcase">
+                <div class="container-seleccion-boleto">
+                    <div class="container-buttons">
+                        <input id="btnMenosNormal" type="button" value="-"><input type="text" min="0" max="10" id="txtCantNormal"><input id="btnMasNormal" type="button" value="+">
+                    <div>
+                        <span class="ticket-description" aria-label="Boleto Normal" tabindex="1">Boleto Normal</span><br>
+                        <span class="price ">C$ 100</span>
+                    </div>
+                    </div>
+                    <div class="container-buttons">
+                        <input id="btnMenosVIP" type="button" value="-"><input type="text" min="0" max="10" id="txtCantVIP"><input  id="btnMasVIP" type="button" value="+">
+                    <div>
+                        <span class="ticket-description" aria-label="Boleto VIP" tabindex="1">Boleto VIP</span><br>
+                        <span class="price ">C$ 180</span>
+                    </div>
+                    </div>
+                    <p>Desea añadir un combo a su compra?<input type="button" id="btnAdquirir" value="Adquirir"></p>
+                </div>
+                <input type="button" id="btnAnterior1" value="Anterior">
+                <input type="button" id="btnSiguiente2" value="Siguiente">
+            </div>
+        </center>
+
+    <center>
+        <div class="container-seleccion-combo container-card animated bounceInUp showcase">
+            <div class="cotainer-seleccion-combo-interior">
+                <h6 id="descriptionCombo"></h6>
+                <ul id="opcionesCombo"></ul>
+            </div>
+            <input id="btnEliminarCompra" type="button" value="Eliminar de la compra">
+            <input id="btnAdquirirCompra" type="button" value="Añadir a la compra">
+        </div>
+    </center>
+
+    <center>
+        <div class="container-seleccionar-asientos container-card animated bounceInUp showcase">
+            <h4>Seleccione Su Asiento</h4>
+            <div class="container-asientos">
+                <div>
+                    <input type="checkbox" name="asiento" id="rdaA1" value="A1">
+                    <label for="rdaA1">A1</label><br>
+                    <input type="checkbox" name="asiento" id="rdaB1" value="B1">
+                    <label for="rdaB1">B1</label><br>
+                    <input type="checkbox" name="asiento" id="rdaC1" value="C1">
+                    <label for="rdaC1">C1</label><br>
+                    <input type="checkbox" name="asiento" id="rdaD1" value="D1">
+                    <label for="rdaD1">D1</label><br>
+                    <input type="checkbox" name="asiento" id="rdaE1" value="E1">
+                    <label for="rdaE1">E1</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="asiento" id="rdaA2" value="A2">
+                    <label for="rdaA2">A2</label><br>
+                    <input type="checkbox" name="asiento" id="rdaB2" value="B2">
+                    <label for="rdaB2">B2</label><br>
+                    <input type="checkbox" name="asiento" id="rdaC2" value="C2">
+                    <label for="rdaC2">C2</label><br>
+                    <input type="checkbox" name="asiento" id="rdaD2" value="D2">
+                    <label for="rdaD2">D2</label><br>
+                    <input type="checkbox" name="asiento" id="rdaE2" value="E2">
+                    <label for="rdaE2">E2</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="asiento" id="rdaA3" value="A3">
+                    <label for="rdaA3">A3</label><br>
+                    <input type="checkbox" name="asiento" id="rdaB3" value="B3">
+                    <label for="rdaB3">B3</label><br>
+                    <input type="checkbox" name="asiento" id="rdaC3" value="C3">
+                    <label for="rdaC3">C3</label><br>
+                    <input type="checkbox" name="asiento" id="rdaD3" value="D3">
+                    <label for="rdaD3">D3</label><br>
+                    <input type="checkbox" name="asiento" id="rdaE3" value="E3">
+                    <label for="rdaE3">E3</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="asiento" id="rdaA4" value="A4">
+                    <label for="rdaA4">A4</label><br>
+                    <input type="checkbox" name="asiento" id="rdaB4" value="B4">
+                    <label for="rdaB4">B4</label><br>
+                    <input type="checkbox" name="asiento" id="rdaC4" value="C4">
+                    <label for="rdaC4">C3</label><br>
+                    <input type="checkbox" name="asiento" id="rdaD4" value="D4">
+                    <label for="rdaD4">D4</label><br>
+                    <input type="checkbox" name="asiento" id="rdaE4" value="E4">
+                    <label for="rdaE4">E4</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="asiento" id="rdaA5" value="A5">
+                    <label for="rdaA5">A5</label><br>
+                    <input type="checkbox" name="asiento" id="rdaB5" value="B5">
+                    <label for="rdaB5">B5</label><br>
+                    <input type="checkbox" name="asiento" id="rdaC5" value="C5">
+                    <label for="rdaC5">C5</label><br>
+                    <input type="checkbox" name="asiento" id="rdaD5" value="D5">
+                    <label for="rdaD5">D5</label><br>
+                    <input type="checkbox" name="asiento" id="rdaE5" value="E5">
+                    <label for="rdaE5">E5</label>
+                </div>
+            </div>
+
+            <input id="regresarSeleccionBoleto" type="button" value="Anterior">
+            <input id="btnLimpiarAsientos" type="button" value="Limpiar Asientos">
+            <input id="btnRealizarPago" type="button" value="Agregar Compra">
+        </div>
+    </center>
+
+    <form id="formulario-datos-generales">
+        <center>
+            <div class="container-datos-personales animated bounceInUp showcase">
+                <div class="container-datos-form">
+                    <h3>Detalles Personales</h3><br>
+                    <label for="txtNombreCompra">Nombre</label><br>
+                    <input type="text" pattern="[A-Za-z ]+" title="Solo se permiten letras" name="txtNombreCompra" id="txtNombreCompra" required><br>
+                    <label for="txtEmailCompra">Correo Electronico</label><br>
+                    <input type="text" pattern="[^ ]+@[^ ]+\.[a-z]{2,8}" title="Ingrese un correo valido" name="txtEmailCompra" id="txtEmailCompra" required><br><br>
+                    <label for="txtCedula">Cedula</label><br>
+                    <input type="text" pattern="[0-9]{3}-[0-9]{6}-[0-9]{4}[A-Za-z]" title="Ingrese una identificacion valida" name="txtCedula" id="txtCedula" maxlength="16" required><br>
+                    <label for="txtTelefono">Telefono</label><br>
+                    <input type="text" pattern="[0-9]{8}" name="txtTelefono" id="txtTelefono" title="Solo se permiten numeros" maxlength="8" required><br>
+                    <input id="btnRealizarPagoConTarjeta" type="submit" value="Realizar Pago">
+                </div>
+            </div>
+        </center>
+    </form>
+
+    <form id="formulario-forma-pago">
+        <div class="container-rellenado-datos animated bounceInUp showcase">
+                <div class="container">
+                    <div class="card__container">
+                        <div class="card-tarjeta">
+                            <div class="row credit">
+                                <div class="left">
+                                    <center>
+                                        <h4>Pago Con Tarjeta</h4>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="row cardholder">
+                                <div class="info">
+                                    <label for="txtNombreTarjeta">Name</label>
+                                    <input type="text" placeholder="Titular de la tarjeta" pattern="[A-Za-z ]+" title="Solo se permiten letras" maxlength="40" id="txtNombreTarjeta" autocomplete="off" required/>
+                                </div>
+                            </div>
+                            <div class="row number">
+                                <div class="info">
+                                    <label for="txtNumberTarjeta">Card number</label>
+                                    <input id="txtNumberTarjeta" type="text" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" title="Ingrese una forma de pago valida" maxlength="19" placeholder="0000-0000-0000-000X" autocomplete="off" required/>
+                                </div>
+                            </div>
+                            <div class="row details">
+                                <div class="left">
+                                    <label for="cmbMes">Expira</label>
+                                    <select id="cmbMes" title="Seleccione el mes de vencimiento" required>
+                                        <option value="">MM</option>
+                                        <option value="1">01</option>
+                                        <option value="2">02</option>
+                                        <option value="3">03</option>
+                                        <option value="4">04</option>
+                                        <option value="5">05</option>
+                                        <option value="6">06</option>
+                                        <option value="7">07</option>
+                                        <option value="8">08</option>
+                                        <option value="9">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                    <span>/</span>
+                                    <select id="cmbAnio" title="Seleccione el año de vencimiento" required>
+                                        <option>YYYY</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                        <option value="2030">2030</option>
+                                    </select>
+                                </div>
+                                <div class="right">
+                                    <label for="txtCVV">CVC/CVV</label>
+                                    <input type="text" pattern="[0-9]{3}" title="Ingrese los 3 numeros al reverso de la tarjeta" maxlength="3" placeholder="123" id="txtCVV" autocomplete="off" required/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" id="btnConfirmacionPago" value="Confirmar Pago">
+                    </div>
+                </div>
+        </div>
+    </form>
+
+
+    <center>
+        <div class="container-tabla container-card animated bounceInUp showcase">
+            <table id="data-table">
+                <thead>
+                    <tr></tr>
+                </thead>
+                <tbody>
+                    <tr></tr>
+                </tbody>
+            </table>
+            <button id="btnComprar"><img src="/resources/public/img/home/ticket-perforated.svg" alt="">Comprar</button>
+        </div>
+    </center>
+</div>
+
+    <footer class="footer">
+        <div class="container-fluid text-center">
+            <p class="final text-white text-center">
+                © 2023 CINEMAS | TODOS LOS DERECHOS RESERVADOS
+                <a href="https://www.facebook.com/cinemasnic">
+                    <img src="/resources/public/img/home/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/cinemasnic/">
+                    <img src="/resources/public/img/home/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://twitter.com/i/flow/login?redirect_after_login=%2FCinemasNic">
+                    <img src="/resources/public/img/home/twitter.svg" alt="Twitter">
+                </a>
+                <a href="https://www.youtube.com/channel/UC9dKc8rFAu9w0SYS-0jO3Yg">
+                    <img src="/resources/public/img/home/youtube.svg" alt="">
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script type="module" src="/resources/public/js/home/home.js"></script>
+    </body>
+</html>

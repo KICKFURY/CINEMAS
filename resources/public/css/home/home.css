@@ -1,0 +1,669 @@
+/* imports */
+@import "/resources/public/css/home/loading.css";
+@import "/resources/public/css/home/datos-generales.css";
+@import "/resources/public/css/home/card.css";
+@import "/resources/public/css/home/rellenado-credit.css";
+
+:root {
+    /* sizes */
+    --height-navbar: 80px;
+    --height-footer: 50px;
+
+    /* colors */
+    --black-color: #000;
+    --white-color: #fff;
+    --red-color: #f00;
+    --green-color: #0f0;
+    --blue-color: #00f;
+    --button-color: rgb(26, 26, 112);
+    --cyan-color: rgb(17, 191, 235);
+    --bs-body-color: #212529;
+    --bs-body-bg: #fff;
+
+    /* others */
+    --border-components: 0.5px solid rgba(17, 191, 235, 0.4);
+    --border-components-max: 3px solid rgba(17, 191, 235, 0.4);
+    --border-black: 0.5px solid #000;
+    --shadow-cyan: 5px 5px 20px rgba(17, 191, 235, 0.4);
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+
+    /* Fuentes */
+    --bs-font-sans-serif: system-ui,-apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+}
+
+/* general styles */
+
+/* html {
+    font-size: 10px;
+    -webkit-tap-highlight-color:rgba(0,0,0,0)
+} */
+
+body {
+    margin:0;
+    font-family: var(--bs-body-font-family);
+    /* font-size: var(--bs-body-font-size); */
+    /* font-weight: var(--bs-body-font-weight); */
+    /* line-height: var(--bs-body-line-height); */
+    /* color: var(--bs-body-color); */
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    padding: 0;
+    background: url("/resources/public/img/home/background.png") no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 { 
+    font-size: 1rem;
+}
+
+p {
+    margin-top:0;
+    margin-bottom: 1rem;
+}
+
+ol, ul {
+    padding-left: 2rem;
+}
+
+ul {
+    margin-top:0;
+    margin-bottom: 1rem;
+}
+
+ul ol, ul ul { 
+    margin-bottom: 0
+}
+
+dt {
+    font-weight: 700
+}
+
+dd {
+    margin-bottom: .5rem;
+    margin-left:0
+}
+
+blockquote { 
+    margin: 0 0 1rem;
+}
+
+b {
+    font-weight: bolder;
+}
+
+sub {
+    position: relative;
+    font-size: .75em;
+    line-height: 0;
+    vertical-align: baseline;
+    bottom: -.25em;
+}
+
+a {
+    color: #0d6efd;
+    text-decoration: underline
+}
+
+a:focus,a:hover {
+    color:#23527c;
+    text-decoration:underline
+}
+
+.navbar-nav{ 
+    display :flex;
+    flex-direction: column;
+    padding-left:0;
+    margin-bottom:0;
+    list-style:none
+}
+
+.navbar-collapse {
+    flex-basis:100%;
+    flex-grow:1;
+    align-items:center
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white-color);
+    height: var(--height-navbar);
+    padding: .5rem 70px .5rem 70px;
+    border-bottom: var(--border-components);
+}
+
+.nav-link.active {
+    color:rgba(0,0,0,.9)
+}
+
+.container-fluid {
+    display:flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    padding: 0 .75rem;
+    margin-right:auto;
+    margin-left:auto
+}
+
+.container-fluid:after,
+.container-fluid:before {
+    display: table;
+    content:""
+}
+
+.justify-content-end {
+    justify-content:flex-end!important
+}
+
+.navbar img {
+    height: calc(var(--height-navbar) - 15px);
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+}
+
+.title {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-shadow: 5px 5px 3px black, 5px 5px 3px white;
+    mix-blend-mode: multiply;
+    text-align: center;
+    padding-top: 0px;
+}
+
+.subtitle {
+    color: #fff;
+    text-shadow: 3px 3px 1px black, 3px 3px 1px white;
+    text-align: center;
+    display: grid;
+    margin: auto;
+}
+
+.showcase {
+    width: 100%;
+    height: calc(100vh - var(--height-navbar) - var(--height-footer));
+    position: relative;
+}
+
+.importantia {
+    text-align: center;
+    color: gray;
+}
+
+.container-general, .container-Seleccion-Boleto,
+.container-seleccion-combo, .container-seleccionar-asientos {
+    margin: 0;
+    border-radius: 10px;
+    padding: 5px 0px 5px 0px;
+    width: 50%;
+    height: 50%;
+    gap: 10px;
+}
+
+.container-seleccionar-asientos {
+    margin-top: 5%;
+}
+
+.container-seleccionar-asientos h4 {
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 3px 3px 2px #000, 3px 3px 2px #fff;
+    margin-bottom: 10px;
+}
+
+.container-general select {
+    margin-bottom: 10px; 
+}
+
+#btnSiguiente1 {
+    width: 150px;
+    height: 30px;
+}
+
+.container-asientos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="checkbox"] {
+    margin-left: 15px;
+}
+
+.container-tabla {
+    padding: 10px;
+}
+.container-tabla img {
+    margin-right: 10px;
+}
+
+input[type="button"], input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit
+}
+
+table {
+    margin-top: 8%;
+    width: 95%;
+}
+
+thead, th {
+    background-color: rgb(0, 2, 114);
+    color: var(--white-color);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+tbody, td {
+    background-color: rgba(128, 128, 128, 0.342);
+    color: var(--white-color);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.container-general select {
+    text-align: center;
+    text-transform: uppercase;
+    width: 200px;
+}
+
+.container-general select:hover {
+    border-color: var(--blue-color);
+}
+
+input[type="button"], input[type="submit"] {
+    background-color: var(--button-color);
+    color: var(--white-color);
+    border-radius: 10px;
+    width: 100px;
+}
+
+input[type="button"]:disabled, #btnComprar:disabled, select:disabled {
+    background-color: rgb(128, 128, 128);
+    color: #000;
+    cursor: not-allowed;
+}
+
+select {
+    cursor: pointer;
+}
+
+#btnAdquirir:disabled {
+    cursor: not-allowed;
+    color: rgb(128, 128, 128);
+}
+
+#btnRealizarPago {
+    width: 150px;
+}
+
+#btnEliminarCompra {
+    width: 200px;
+    height: 30px;
+}
+
+p {
+    color: #DEDFDF;
+}
+
+#btnAdquirir {
+    background-color: transparent;
+    color: #DEDFDF;
+    border: none;
+    font-size: 12px;
+}
+
+#btnComprar {
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white-color);
+    margin-top: 5%;
+    background-color: rgb(235, 11, 11);
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+#btnAdquirir:active {
+    color: var(--button-color);
+}
+
+.footer {
+    background-color: var(--black-color);
+    height: var(--height-footer);
+    border-top: var(--border-components);
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.final img {
+    margin-left: 10px;
+}
+
+#bajada{
+    width: 100%;
+}
+
+#fecha, #cinemas, #pelicula, #horario {
+    background-color: transparent;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #DEDFDF;
+}
+
+#fecha option, #cinemas option,
+#pelicula option, #horario option {
+    background-color: #fff;
+    color: #000;
+}
+
+#fecha option:disabled {
+    background-color: rgb(128, 128, 128);
+}
+
+.container-general {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-general-interior {
+    margin-top: 15%;
+    width: 800px;
+    height: 150px;
+}
+
+.container-general-interior select {
+    margin-top: 2%;
+    font-weight: 900;
+    width: 350px;
+    height: 30px;
+}
+
+.container-seleccion-boleto, .container-general-interior,
+.cotainer-seleccion-combo-interior, .container-asientos {
+    background-color: rgba(31, 31, 133, .9);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#btnAnterior1, #btnSiguiente2 {
+    width: 150px;
+    height: 30px;
+}
+
+#btnAdquirirCompra {
+    width: 200px;
+    height: 30px;
+}
+
+#regresarSeleccionBoleto, #btnLimpiarAsientos, #btnRealizarPago {
+    width: 150px;
+    height: 30px;
+}
+
+.cotainer-seleccion-combo-interior {
+    color: #B8B8B7;
+}
+
+.container-asientos {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: #B8B8B7;
+    padding: 10px;
+}
+
+.container-seleccion-boleto input[type="button"] {
+    background-color: rgb(194, 194, 194);
+    color: rgb(255, 0, 0);
+    margin-bottom: 5px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0 8px;
+    height: 35px;
+    width: 50px;
+}
+
+.container-seleccion-boleto input {
+    background-color: #DEDFDF;
+    border-radius: 5px;
+    text-align: center;
+    color: #2d3e75;
+    font-weight: 900;
+    max-height: 50px;
+    font-size: 1.3em;
+    height: 100%;
+    width: 50px;
+}
+
+.container-seleccion-boleto {
+    height: 180px;
+}
+
+.container-seleccion-boleto p {
+    font-weight: 500;
+}
+
+.ticket-description {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    display: block;
+    text-transform: uppercase;
+}
+
+.price {
+    font-weight: 500;
+    color: #fff;
+    text-align: left;
+    font-size: 15px;
+    display: block;
+    transform: translateY(-22px);
+}
+
+.container-buttons {
+    width: 500px;
+    margin-bottom: 8px;
+    display: flex;
+}
+
+/* Animacion de giro */
+/* .animated {
+    -webkit-animation-name: flip;
+    animation-name: flip;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+} */
+
+.bounceInUp {
+    -webkit-animation-name: bounceInUp;
+    animation-name: bounceInUp;
+}
+
+/* Animacion de desplazamiento hacia arriba */
+.animated {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-fill-mode: both
+}
+
+@-webkit-keyframes bounceInUp {
+    0%, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);
+        animation-timing-function:cubic-bezier(.215,.61,.355,1)}
+    0% {
+        -webkit-transform: translate3d(0, 3000px, 0);
+        opacity: 0;
+        transform:translate3d(0, 3000px, 0)
+    }
+    60% {
+        -webkit-transform:translate3d(0,-20px,0);
+        opacity:1;
+        transform:translate3d(0,-20px,0)
+    }
+    75% {
+        -webkit-transform:translate3d(0,10px,0);
+        transform:translate3d(0,10px,0)
+    }
+    90% {
+        -webkit-transform:translate3d(0,-5px,0);
+        transform:translate3d(0,-5px,0)
+    }
+    to {
+        -webkit-transform:translateZ(0);
+        transform:translateZ(0)
+    }
+}
+
+@keyframes bounceInUp {
+    0%, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(.215,.61,.355,1);
+        animation-timing-function:cubic-bezier(.215,.61,.355,1)
+    }
+    0% {
+        -webkit-transform:translate3d(0,3000px,0);
+        opacity:0;
+        transform:translate3d(0,3000px,0)
+    }
+    60% {
+        -webkit-transform:translate3d(0,-20px,0);
+        opacity:1;
+        transform:translate3d(0,-20px,0)
+    }
+    75% {
+        -webkit-transform:translate3d(0,10px,0);
+        transform:translate3d(0,10px,0)
+    }
+    90% {
+        -webkit-transform: translate3d(0,-5px,0);
+        transform:translate3d(0,-5px,0)
+    }
+    to {
+        -webkit-transform:translateZ(0);
+        transform:translateZ(0)
+    }
+}
+
+@keyframes flip{
+    0% {
+        -webkit-animation-timing-function: ease-out;
+        -webkit-transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
+        animation-timing-function:ease-out;
+        transform:perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn)
+    }
+    40% {
+        -webkit-animation-timing-function:ease-out;
+        -webkit-transform:perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
+        animation-timing-function:ease-out;transform:perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg)
+    }
+    50% {
+        -webkit-animation-timing-function:ease-in;
+        -webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
+        animation-timing-function:ease-in;
+        transform:perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg)
+    }
+    80% {
+        -webkit-animation-timing-function:ease-in;
+        -webkit-transform:perspective(400px) scale3d(.95,.95,.95) translateZ(0) rotateY(0deg);
+        animation-timing-function:ease-in;
+        transform:perspective(400px) scale3d(.95,.95,.95) translateZ(0) rotateY(0deg)
+    }
+    to {
+        -webkit-animation-timing-function:ease-in;
+        -webkit-transform:perspective(400px) scaleX(1) translateZ(0) rotateY(0deg);
+        animation-timing-function:ease-in;
+        transform:perspective(400px) scaleX(1) translateZ(0) rotateY(0deg)
+    }
+}
+
+@media (min-width:1200px) {
+    h1 {
+        font-size: 2.5rem
+    }
+}
+
+@media (min-width:1200px) {
+    h2 {
+        font-size: 2rem
+    }
+}
+
+@media (min-width:1200px) {
+    h3 {
+        font-size: 1.75rem
+    }
+}
+
+@media (min-width:1200px) {
+    h4 {
+        font-size: 1.5rem
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .animated {
+        -webkit-animation: unset!important;
+        -webkit-transition: none!important;
+        animation: unset!important;
+        transition: none!important
+    }
+}
+
+@media (min-width: 350px) {
+    
+    .navbar-expand-lg .navbar-nav {
+        flex-direction:row
+    }
+    
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem
+    }
+    
+    .navbar-expand-lg .navbar-collapse{
+        display: flex !important;
+        flex-basis: auto
+    }
+}
+
+@media (max-width: 500px) {
+    .container-general {
+        padding-top: 5px;
+        padding-left: 10px;
+        height: 220px;
+        display: flexbox;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

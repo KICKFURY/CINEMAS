@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/public/css/login/login.css">
+    <title>Inicio de Secion y Registro</title>
+</head> 
+<body>
+    <main>
+        <div class="container__login__trasero">
+            <form id="formulario-login">
+                <div class="container__iniciarSecion animated-bg">
+                    <center>
+                        <img src="/resources/public/img/login/logo.png" alt="Logo Cinemas">
+                        <div class="container-inicio-center">
+                            <h1>Iniciar Sesión</h1>
+                            <div class="container-input">
+                                <label for="txtEmail">Correo Electronico</label><br>
+                                <input type="email" id="txtEmail" pattern="[^ ]+@[^ ]+\.[a-z]{2,8}" placeholder="example@gmail.com" required><br>
+                                <label for="txtPsw">Ingrese Contraseña</label><br>
+                                <input type="password" id="txtPsw" placeholder="Ingrese Contraseña" required><br>
+                            </div>
+                            <input type="submit" id="btnInicioSecion" value="Iniciar Sesión">
+                            <button id="btnRegistrar">Registrarse</button>
+                        </div>
+                    </center>
+                </div>
+            </form>
+
+            <div class="container__registrar">
+                <center>
+                    <img src="/resources/public/img/login/logo.png" alt="Logo Cinemas">
+                    <div class="container-registrar-center">
+                        <form id="formulario-register">
+                            <div class="container-input">
+                                <h1>Registro usuario</h1>
+                                <label for="txtUserName">Nombre Completo</label><br>
+                                <input type="text" pattern="[A-Za-z ]+" placeholder="Ingrese su nombre completo" title="Solo se permiten letras" id="txtUserName" required><br>
+                                <label for="txtUserEmail">Correo Electronico</label><br>
+                                <input type="email" pattern="[^ ]+@[^ ]+\.[a-z]{2,8}" placeholder="example@gmail.com" title="Ingrese un correo valido" id="txtUserEmail" required><br>
+                                <label for="txtUserPsw">Ingrese Contraseña</label><br>
+                                <input type="password" placeholder="Ingrese una contraseña" id="txtUserPsw" required><br>
+                                <label for="txtUserConfiPsw">Confirme su Contraseña</label><br>
+                                <input type="password" placeholder="Confirme la contraseña" id="txtUserConfiPsw" required><br>
+                                <button id="btnInicio">Iniciar Sesión</button>
+                                <input type="submit" id="btnRegisterUser" value="Registrarse">
+                            </div>
+                        </form>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="/resources/public/js/login/login.js"></script>
+</body>
+</html>
